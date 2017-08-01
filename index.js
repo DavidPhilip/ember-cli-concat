@@ -249,6 +249,8 @@ module.exports = {
   */
 
   included: function(app) {
+    this._super.included.apply(this, arguments);
+    
     var environment = app.env.toString();
     var options = defaultFor(app.options.emberCliConcat, {});
 
